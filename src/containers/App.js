@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-// import TodoApp from './TodoApp';
-// import { createRedux } from 'redux';
-// import { Provider } from 'redux/react';
-// import * as stores from '../stores';
+import TypeAheadApp from './TypeAheadApp';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import items from '../reducers/items';
+import thunk from 'redux-thunk';
 
-// const redux = createRedux(stores);
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const store = createStoreWithMiddleware(items);
 
 class App extends Component {
   render() {
     return (
-      <div>
-      hi Tim
-      </div>
-      // <Provider redux={redux}>
-      //   {() => <TodoApp />}
-      // </Provider>
+      <Provider store={store}>
+        {() => <TypeAheadApp />}
+      </Provider>
     );
   }
 }

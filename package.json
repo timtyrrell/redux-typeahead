@@ -18,9 +18,11 @@
   "author": "Tim Tyrrell",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.5.4",
     "react": "^0.13.3",
     "react-redux": "^0.8.2",
-    "redux": "^1.0.0-rc"
+    "redux": "^1.0.1",
+    "redux-thunk": "^0.1.0"
   },
   "devDependencies": {
     "babel-core": "^5.8.22",

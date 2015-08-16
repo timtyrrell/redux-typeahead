@@ -1,5 +1,5 @@
 import React, { findDOMNode, Component, PropTypes } from 'react';
-import TypeAheadResults     from './TypeAheadResults';
+import TypeAheadResults from './TypeAheadResults';
 
 class TypeAhead extends Component {
   static defaultProps = { results: [] };
